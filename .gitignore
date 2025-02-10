@@ -1,0 +1,15 @@
+build/*
+.idea/*
+
+# Ignore compiled artifacts and cache files
+.sui/
+.sui_client.yaml
+.sui_config/
+storage/
+*.move.mv
+
+# Ignore build artifacts
+Move.lock.bak
+*.log
+*.tmp
+.DS_Store
