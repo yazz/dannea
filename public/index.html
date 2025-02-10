@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sui Web3 Example</title>
+
+    <script src="
+https://cdn.jsdelivr.net/npm/sui-sdk@1.0.1/index.min.js
+"></script>
+
+</head>
+<body>
+
+<h1>Connect to Sui Wallet</h1>
+<button id="connectWallet">Connect Wallet</button>
+
+<script>
+    async function connectSuiWallet() {
+        if (!window.sui) {
+            alert("Sui wallet not detected! Please install a Sui-compatible wallet.");
+            return;
+        }
+
+        try {
+            const accounts = await window.sui.request({ method: "sui_connect" });
+            console.log("Connected Wallet:", accounts);
+            alert("Connected to Sui Wallet!");
+        } catch (error) {
+            console.error("Sui Wallet Connection Error:", error);
+        }
+    }
+
+    document.getElementById("connectWallet").addEventListener("click", connectSuiWallet);
+</script>
+
+</body>
+</html>
