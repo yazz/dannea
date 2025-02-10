@@ -1,5 +1,7 @@
 build/*
 .idea/*
+node_modules/*
+package-lock.json
 
 # Ignore compiled artifacts and cache files
 .sui/
