@@ -13,7 +13,7 @@ module dannea::start {
     fun init(ctx: &mut TxContext) {
         let admin = USDD {
             id: object::new(ctx),
-            value: 0,
+            value: 0
         };
 
         transfer::transfer(admin, ctx.sender());
