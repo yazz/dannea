@@ -8,7 +8,7 @@ const config = {
     entry: "./src/index.js",
     output: {
         filename: "webpack_output.js",
-        path: path.resolve(__dirname, "/public/dist/") // 👈 Change output directory
+        path: path.resolve(__dirname, "../public/dist/") // 👈 Change output directory
     },
     mode: "development"
 };

@@ -2,7 +2,7 @@ build/*
 .idea/*
 node_modules/*
 package-lock.json
-dist/*
+public/dist/*
 
 # Ignore compiled artifacts and cache files
 .sui/

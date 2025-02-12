@@ -1,6 +1,6 @@
 export default function bar() {
     //
 
-    alert(2)
+    alert(3)
 
 }
