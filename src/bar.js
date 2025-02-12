@@ -1,6 +1,6 @@
 export default function bar() {
     //
 
-    alert("Hallo ducks")
+    alert("Hallo ducks2")
 
 }
