@@ -5,8 +5,6 @@ import { WalletStandardAdapterProvider } from "@mysten/wallet-adapter-wallet-sta
 //debugger
 bar();
 
-oo("test", {})
-
 async function connectWallet() {
     const walletProvider = new WalletStandardAdapterProvider();
     oo("walletProvider", walletProvider)
