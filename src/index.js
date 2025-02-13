@@ -1,10 +1,14 @@
 import bar from './bar.js';
 import { getFullnodeUrl } from '@mysten/sui/client';
 import { WalletStandardAdapterProvider } from "@mysten/wallet-adapter-wallet-standard";
+import React from "react";
 import { createRoot } from 'react-dom/client';
 
-export default {
+const mymodule =  {
     greet: 1,
+    hgjfds: function() {
+    },
+    ghdfsghjhjgsdf: 9,
     connectWallet: async function () {
 
 // Clear the existing HTML content
@@ -17,7 +21,7 @@ export default {
 
 
         const walletProvider = new WalletStandardAdapterProvider();
-        oo("walletProvider", walletProvider)
+        //oo("walletProvider", walletProvider)
         const wallets = walletProvider.get();
 
         if (wallets.length === 0) {
@@ -37,7 +41,7 @@ export default {
     }
 }
 
-
+export default mymodule;
 bar();
 
 

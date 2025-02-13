@@ -14,7 +14,9 @@
 
 <script type="module">
     import * as jscode from "/dist/webpack_output.js"
+    import {connectWallet} from "/dist/webpack_output.js"
     alert(JSON.stringify(jscode))
+    jscode.connectWallet()
 </script>
 
 </body>
