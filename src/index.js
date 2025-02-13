@@ -2,10 +2,11 @@ import bar from './bar.js';
 import { getFullnodeUrl } from '@mysten/sui/client';
 import { WalletStandardAdapterProvider } from "@mysten/wallet-adapter-wallet-standard";
 
-//debugger
 bar();
 
 async function connectWallet() {
+
+
     const walletProvider = new WalletStandardAdapterProvider();
     oo("walletProvider", walletProvider)
     const wallets = walletProvider.get();
