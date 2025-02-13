@@ -1,13 +1,15 @@
 const webpack = require("webpack");
 const path = require("path");
 
-
-
 const config = {
     entry: "./src/index.js",
     output: {
         filename: "webpack_output.js",
-        path: path.resolve(__dirname, "../public/dist/") // 👈 Change output directory,
+        path: path.resolve(__dirname, "../public/dist/"), // 👈 Change output directory,
+        library: {type: "module"}
+    },
+    experiments: {
+        outputModule: true, // Required for ES module output
     },
     module: {
         rules: [

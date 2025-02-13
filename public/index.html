@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sui Web3 Example</title>
 
-    <script src="dist/webpack_output.js"></script>
 
 </head>
 <body>
 
 <h1>Connect to Sui Wallet</h1>
-<button id="connectWallet">Connect Wallet</button>
+<button id="connectWallet" onclick="connectWallet()">Connect Wallet</button>
 
-<script>
-
+<script type="module">
+    import * as jscode from "/dist/webpack_output.js"
+    alert(JSON.stringify(jscode))
 </script>
 
 </body>
