@@ -1,14 +1,17 @@
 import bar from './bar.js';
 import { getFullnodeUrl } from '@mysten/sui/client';
-import { WalletStandardAdapterProvider } from "@mysten/wallet-adapter-wallet-standard";
+import { getWallets } from '@mysten/wallet-standard';
+oo("getWallets", getWallets)
+
+const availableWallets = getWallets().get();
+
 
 bar();
 
 async function connectWallet() {
 
 
-    const walletProvider = new WalletStandardAdapterProvider();
-    oo("walletProvider", walletProvider)
+    const walletProvider = getWallets()
     const wallets = walletProvider.get();
 
     if (wallets.length === 0) {
@@ -30,5 +33,5 @@ async function connectWallet() {
 connectWallet()
 
 function oo(n,o) {
-    console.log(n + ": " + JSON.stringify(null,2))
+    alert(n + ": " + JSON.stringify(null,2))
 }
